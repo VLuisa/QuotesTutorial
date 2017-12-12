@@ -12,6 +12,7 @@
 		146A589D1FE039C800B61D7B /* Quotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 146A589B1FE039C800B61D7B /* Quotes.xcdatamodeld */; };
 		146A589F1FE039C800B61D7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 146A589E1FE039C800B61D7B /* Assets.xcassets */; };
 		146A58A21FE039C800B61D7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 146A58A01FE039C800B61D7B /* Main.storyboard */; };
+		146A58AB1FE048FC00B61D7B /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A58AA1FE048FC00B61D7B /* QuotesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		146A58A11FE039C800B61D7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		146A58A31FE039C800B61D7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		146A58A41FE039C800B61D7B /* Quotes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Quotes.entitlements; sourceTree = "<group>"; };
+		146A58AA1FE048FC00B61D7B /* QuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				146A58971FE039C800B61D7B /* AppDelegate.swift */,
+				146A58AA1FE048FC00B61D7B /* QuotesViewController.swift */,
 				146A58991FE039C800B61D7B /* ViewController.swift */,
 				146A589E1FE039C800B61D7B /* Assets.xcassets */,
 				146A58A01FE039C800B61D7B /* Main.storyboard */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				146A589A1FE039C800B61D7B /* ViewController.swift in Sources */,
+				146A58AB1FE048FC00B61D7B /* QuotesViewController.swift in Sources */,
 				146A589D1FE039C800B61D7B /* Quotes.xcdatamodeld in Sources */,
 				146A58981FE039C800B61D7B /* AppDelegate.swift in Sources */,
 			);
