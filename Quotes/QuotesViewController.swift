@@ -8,7 +8,12 @@
 
 import Cocoa
 
+
+
 class QuotesViewController: NSViewController {
+    
+    // makes property accessible from the storyboard
+    @IBOutlet var textLabel: NSTextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,5 +34,18 @@ extension QuotesViewController {
             fatalError("Why cant i find QuotesViewController? - Check Main.storyboard")
         }
         return viewcontroller
+    }
+
+}
+
+// MARK: Actions
+extension QuotesViewController {
+    @IBAction func previous(_ sender: NSButton) {
+    }
+    
+    @IBAction func next(_ sender: NSButton) {
+    }
+    
+    @IBAction func quit(_ sender: NSButton) {
     }
 }

@@ -687,11 +687,69 @@
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ogu-FP-FKV">
+                                <rect key="frame" x="421" y="117" width="45" height="32"/>
+                                <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSGoRightTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wih-Qw-PFf">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="next:" target="XfG-lQ-9wD" id="n24-pD-aA3"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="249" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="rM7-RL-4Me">
+                                <rect key="frame" x="71" y="126" width="338" height="17"/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Multiline Label" id="P0W-vo-T9I">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oxk-va-Cx3">
+                                <rect key="frame" x="184" y="13" width="113" height="32"/>
+                                <buttonCell key="cell" type="push" title="Quit Quotes" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4eX-se-IyH">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="quit:" target="XfG-lQ-9wD" id="r2f-4V-1zT"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ovE-KX-0HL">
+                                <rect key="frame" x="14" y="117" width="45" height="32"/>
+                                <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSGoLeftTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Uj7-ym-SXc">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="previous:" target="XfG-lQ-9wD" id="mq1-vz-pId"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Ogu-FP-FKV" secondAttribute="trailing" constant="20" id="7by-In-ZWM"/>
+                            <constraint firstItem="rM7-RL-4Me" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="Bbc-D9-7Ju"/>
+                            <constraint firstAttribute="bottom" secondItem="oxk-va-Cx3" secondAttribute="bottom" constant="20" id="LwI-IN-O6u"/>
+                            <constraint firstItem="Ogu-FP-FKV" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="MH6-ya-EKf"/>
+                            <constraint firstItem="Ogu-FP-FKV" firstAttribute="leading" secondItem="rM7-RL-4Me" secondAttribute="trailing" constant="20" id="bC0-uG-Jt2"/>
+                            <constraint firstItem="ovE-KX-0HL" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="cGF-cp-BQG"/>
+                            <constraint firstItem="ovE-KX-0HL" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="dAo-RK-f9F"/>
+                            <constraint firstItem="oxk-va-Cx3" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="nvD-rl-0tY"/>
+                            <constraint firstItem="rM7-RL-4Me" firstAttribute="leading" secondItem="ovE-KX-0HL" secondAttribute="trailing" constant="20" id="zE3-dK-088"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textLabel" destination="rM7-RL-4Me" id="4bH-tf-VCA"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NSGoLeftTemplate" width="9" height="12"/>
+        <image name="NSGoRightTemplate" width="9" height="12"/>
+    </resources>
 </document>
