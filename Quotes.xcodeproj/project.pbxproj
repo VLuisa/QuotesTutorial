@@ -14,6 +14,7 @@
 		146A58A21FE039C800B61D7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 146A58A01FE039C800B61D7B /* Main.storyboard */; };
 		146A58AB1FE048FC00B61D7B /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A58AA1FE048FC00B61D7B /* QuotesViewController.swift */; };
 		146A58AD1FE04E0000B61D7B /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A58AC1FE04E0000B61D7B /* Quote.swift */; };
+		146A58AF1FE059C600B61D7B /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A58AE1FE059C600B61D7B /* EventMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		146A58A41FE039C800B61D7B /* Quotes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Quotes.entitlements; sourceTree = "<group>"; };
 		146A58AA1FE048FC00B61D7B /* QuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewController.swift; sourceTree = "<group>"; };
 		146A58AC1FE04E0000B61D7B /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		146A58AE1FE059C600B61D7B /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				146A58971FE039C800B61D7B /* AppDelegate.swift */,
 				146A58AC1FE04E0000B61D7B /* Quote.swift */,
 				146A58AA1FE048FC00B61D7B /* QuotesViewController.swift */,
+				146A58AE1FE059C600B61D7B /* EventMonitor.swift */,
 				146A58991FE039C800B61D7B /* ViewController.swift */,
 				146A589E1FE039C800B61D7B /* Assets.xcassets */,
 				146A58A01FE039C800B61D7B /* Main.storyboard */,
@@ -146,6 +149,7 @@
 				146A589A1FE039C800B61D7B /* ViewController.swift in Sources */,
 				146A58AB1FE048FC00B61D7B /* QuotesViewController.swift in Sources */,
 				146A589D1FE039C800B61D7B /* Quotes.xcdatamodeld in Sources */,
+				146A58AF1FE059C600B61D7B /* EventMonitor.swift in Sources */,
 				146A58AD1FE04E0000B61D7B /* Quote.swift in Sources */,
 				146A58981FE039C800B61D7B /* AppDelegate.swift in Sources */,
 			);
