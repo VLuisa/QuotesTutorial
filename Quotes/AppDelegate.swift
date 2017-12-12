@@ -11,7 +11,13 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
+    // creates a Status Item — aka application icon — in the menu bar with a fixed length
     let statusItem = NSStatusBar.system.statusItem(withLength:NSStatusItem.squareLength)
+    
+    // new popover property
+    let popover = NSPopover()
+    
+    var eventMonitor: EventMonitor?
     
     @objc func printQuote(_ sender: Any?) {
         let quoteText = "Never put off until tomorrow what you can do the day after tomorrow."
@@ -24,7 +30,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to initialize your application
         if let button = statusItem.button {
             button.image = NSImage(named:NSImage.Name("StatusBarButtonImage"))
-            button.action = #selector(printQuote(_:))
+            button.action = #selector(togglePopover(_:))
+        }
+        popover.contentViewController = QuotesViewController.freshController()
+        
+        eventMonitor = EventMonitor(mask: [.leftMouseDown, .rightMouseDown]) { [weak self] event in
+            if let strongSelf = self, strongSelf.popover.isShown {
+                strongSelf.closePopover(sender: event)
+            }
         }
     }
 
@@ -128,6 +141,33 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // If we got here, it is time to quit.
         return .terminateNow
     }
-
+    
+    func constructMenu() {
+        let menu = NSMenu()
+        
+        menu.addItem(NSMenuItem(title: "Print Quote", action: #selector(AppDelegate.printQuote(_:)), keyEquivalent: "P"))
+        menu.addItem(NSMenuItem.separator())
+        menu.addItem(NSMenuItem(title: "Quit Quotes", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
+        
+        statusItem.menu = menu
+    }
+    
+    @objc func togglePopover(_ sender: Any?) {
+        popover.isShown ? closePopover(sender: sender) : showPopover(sender: sender)
+    }
+    
+    func showPopover(sender: Any?) {
+        if let button = statusItem.button {
+            popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
+        }
+        eventMonitor?.start()
+    }
+    
+    func closePopover(sender: Any?) {
+        popover.performClose(sender)
+        eventMonitor?.stop()
+    }
 }
+
+
 
